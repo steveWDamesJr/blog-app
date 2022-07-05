@@ -52,7 +52,7 @@ Locate the directory in your file explorer
 
 ### Run the seeder
 
-- `rails db:seed`
+`rails db:seed`
 
 ### To start interactive `puma` server
 
