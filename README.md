@@ -1,6 +1,6 @@
 # Blog App
 
-**Blog App** is a Blog website that shows a list of posts that empower readers to interact with them by adding comments and liking posts. Built with: Ruby on Rails | Ruby | PostgreSQL | CSS | HTML 
+**Blog App** is a Blog website that shows a list of posts that empower readers to interact with them by adding comments and liking posts. 
 
 
 Enjoy!
