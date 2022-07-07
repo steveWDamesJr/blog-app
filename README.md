@@ -20,7 +20,7 @@ Enjoy!
 ## Milestones
 
 - [x] Milestone 1: Creating a data model
-- [ ] Milestone 2: Validations and Model specs
+- [x] Milestone 2: Validations and Model specs
 - [ ] Milestone 3: Processing data in models
 - [ ] Milestone 4: Setup and controllers
 - [ ] Milestone 5: Controllers specs
