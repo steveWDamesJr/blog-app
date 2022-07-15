@@ -8,7 +8,9 @@
   <p><%=@user.bio%></p><br />
 </div>
 <br />
-
+<%if @user.posts_counter == 0%>
+<p>This user does not have any posts!</p>
+<% else %>
 <%= render partial: "layouts/partials/post_preview", locals: { posts: @user.recent_posts } %><br />
-
 <button class="see-all-posts-btn"><%= link_to ("See all posts"),user_posts_path(@user.id)%></button>
+<% end %>
