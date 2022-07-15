@@ -23,7 +23,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('show')
     end
     it 'should include the text' do
-      expect(response.body).to include 'Here is a list of Users'
+      expect(response.body).to include 'Here is an individual user with their bio and recent posts'
     end
   end
 end

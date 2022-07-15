@@ -1,0 +1,17 @@
+
+<div class="flex-container">
+  <div>
+     <img src="https://via.placeholder.com/150.png/09f/fff" class="placeholder-img" alt="profession">
+  </div>
+  <div class="post-container">
+  <p class="header-name">
+    <% if user.posts_counter == 0 %>
+      <span><%=user.name%></span>
+      <p class="header-message">This user does not have any posts</p>
+    <% else %>
+    <%= link_to (user.name), user%>
+    <% end %>
+  </p> 
+  <p class="number-of-post">Number of Posts: <%= user.posts.count %></p>
+  </div>
+</div>

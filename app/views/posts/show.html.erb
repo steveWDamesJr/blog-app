@@ -1,1 +1,19 @@
+<p class="homepage"><%= link_to('Back to Homepage', {controller: 'users', action: 'index'}) %></p>
 <h2>Here is a list of posts for a given user</h2>
+<div class="detail-post-container">
+  <div class="detail-post-head">
+    <%= render partial: "layouts/partials/post_detail_view", locals: { post: @post } %>
+  </div>
+  <%=@post.text%>
+</div>
+
+<div class= "details-comments">
+    <%@post.comments.each do |comment|%>
+      <p>
+        <span><strong><%=comment.author.name%></strong>:</span>
+        <span><%=comment.text%></span>
+      </p>
+    <%end%>
+</div>
+
+

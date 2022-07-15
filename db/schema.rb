@@ -20,10 +20,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_001747) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
     t.index ["author_id"], name: "index_comments_on_author_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -56,7 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_001747) do
   end
 
   add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users"
   add_foreign_key "comments", "users", column: "author_id"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users", column: "author_id"
