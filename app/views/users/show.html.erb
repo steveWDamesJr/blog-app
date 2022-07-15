@@ -1,1 +1,16 @@
-<h2>Here is a list of Users</h2>
+<p class="homepage"><%= link_to('Back to Homepage', {controller: 'users', action: 'index'}) %></p>
+<h2>Here is an individual user with their bio and recent posts</h2>
+
+<%= render partial: "layouts/partials/user_header", locals: { user: @user } %><br />
+
+<div class="bio-container">
+  <h2>Bio</h2>
+  <p><%=@user.bio%></p><br />
+</div>
+<br />
+<%if @user.posts_counter == 0%>
+<p>This user does not have any posts!</p>
+<% else %>
+<%= render partial: "layouts/partials/post_preview", locals: { posts: @user.recent_posts } %><br />
+<button class="see-all-posts-btn"><%= link_to ("See all posts"),user_posts_path(@user.id)%></button>
+<% end %>
