@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   # end
 
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :create, :new, :show] do
+      resources :comments, only: [:index, :create]
+      resources :likes, only: [:create, :destroy]
+    end
   end
   
   # get 'post/index'

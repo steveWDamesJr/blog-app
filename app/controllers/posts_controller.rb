@@ -7,12 +7,27 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new; end
+  def create
+    @post = Post.create(post_params)
+    @post.author = Current.user
+    if @post.save
+      flash[:notice] = 'You have just created a new post!'
+      redirect_to user_post_path(@post.author, @post)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
-  def create; end
+  def new
+    @post = Post.new
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 
   def edit; end
-  # debugger
+
   def update; end
 
   def delete; end

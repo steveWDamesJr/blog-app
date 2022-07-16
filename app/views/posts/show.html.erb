@@ -3,6 +3,7 @@
 <div class="detail-post-container">
   <div class="detail-post-head">
     <%= render partial: "layouts/partials/post_detail_view", locals: { post: @post } %>
+    <%= render partial: "layouts/partials/new_like" %>
   </div>
   <%=@post.text%>
 </div>
@@ -14,6 +15,8 @@
         <span><%=comment.text%></span>
       </p>
     <%end%>
+<%= render partial: "layouts/partials/new_comment" %>
 </div>
+
 
 
