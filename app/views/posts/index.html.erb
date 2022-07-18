@@ -1,9 +1,0 @@
-<p class="homepage"><%= link_to('Back to Homepage', {controller: 'users', action: 'index'}) %></p>
-<h2>Welcome to the Post View</h2>
-
-<%= render partial: "layouts/partials/user_header", locals: { user: @posts.first.author} %><br />
-
-<%= render partial: "layouts/partials/post_comments_preview", locals: { posts: @posts } %>
-
-
-<button class="pagination-btn">Pagination</button>
