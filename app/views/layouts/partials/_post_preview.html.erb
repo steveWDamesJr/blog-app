@@ -1,0 +1,14 @@
+<h1><%= posts.first.author.name%>'s Posts</h1>
+<% posts.each do |post| %>
+  <div class="post-preview-container"> 
+    <h2 class="post-preview-title"><%= post.title%></h2><br />
+    <%= link_to ("See post details"),user_post_path(post.author, post)%>
+    <div class="post-preview-contents">
+      <p><%= post.text%></p>
+      <div class="post-preview-counters">
+        <span>Comments: <%= post.comments_counter%></span>
+        <span>Likes: <%= post.likes_counter%></span>
+      </div>
+    </div>
+  </div>
+<% end %>

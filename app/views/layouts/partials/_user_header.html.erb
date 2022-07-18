@@ -1,0 +1,11 @@
+<div class="flex-container">
+  <div>
+     <img src="https://via.placeholder.com/150.png/09f/fff" class="placeholder-img" alt="profession">
+  </div>
+  <div class="post-container">
+  <p class="header-name">
+    <%= link_to (user.name), user%>
+  </p> 
+  <p class="number-of-post">Number of Posts: <%= user.posts.count %></p>
+  </div>
+</div>

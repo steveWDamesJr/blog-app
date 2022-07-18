@@ -1,0 +1,5 @@
+<h2>Welcome to the Users</h2>
+
+<% @users.each do |user| %>
+<%= render partial: "layouts/partials/user_header", locals: { user: user } %>
+<% end %>
