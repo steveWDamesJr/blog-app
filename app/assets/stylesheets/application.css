@@ -156,3 +156,27 @@
   margin-right: auto;
   margin-top: -1rem;
 }
+
+.new-html-form,
+.new-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.show-create-button-con {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.new-form-submit,
+.new-html-form-submit {
+  color: blue;
+}
+
+.comments-form-placeholder {
+  text-align: center;
+  padding-top: 1rem;
+}
