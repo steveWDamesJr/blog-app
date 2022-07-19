@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }
 
   def recent_posts
-    posts.order(created_at: :desc).includes(:author).limit(3)
+    posts.includes(:author).limit(3).order(created_at: :desc)
   end
 end

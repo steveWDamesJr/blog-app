@@ -14,6 +14,6 @@ class Post < ApplicationRecord
   end
 
   def recent_comments
-    comments.includes(:post).order(created_at: :DESC).includes(:author).limit(5)
+    comments.includes(:author).limit(5).order(created_at: :DESC)
   end
 end
