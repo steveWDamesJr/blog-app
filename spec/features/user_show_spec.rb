@@ -38,14 +38,10 @@ RSpec.describe 'Test user index page', type: :feature do
         expect(page).to have_content('Number of Posts: 4')
       end
       scenario 'See first three posts' do
-        visit user_path(id: @first_user.id)
-        expect(page).to have_content('Great movies')
-        visit user_path(id: @first_user.id)
-        expect(page).to have_content('Shopping')
-        visit user_path(id: @first_user.id)
-        expect(page).to have_content('Holiday Time')
-        visit user_path(id: @first_user.id)
-        expect(page).not_to have_content('So Awesome')
+        visit user_path(id: @first_user.id) expect(page).to have_content('Great movies')
+        visit user_path(id: @first_user.id) expect(page).to have_content('Shopping')
+        visit user_path(id: @first_user.id) expect(page).to have_content('Holiday Time')
+        visit user_path(id: @first_user.id) expect(page).not_to have_content('So Awesome')
       end
       scenario 'When I click a posts, I am redirected to the posts show page' do
         click_link 'See post details', match: :first
