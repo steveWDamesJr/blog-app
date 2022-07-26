@@ -15,7 +15,7 @@ RSpec.describe 'Test user show page', type: :feature do
                                  text: 'J park, T form, Fast n Fur', comments_counter: 0, likes_counter: 0, id: 4)
     end
     scenario 'shows the correct content' do
-      visit user_path(id: @first_user.id) 
+      visit user_path(id: @first_user.id)
       sleep(5)
       expect(page).to have_content('Here is an individual user')
     end
@@ -49,12 +49,12 @@ RSpec.describe 'Test user show page', type: :feature do
       end
       scenario 'When I click a posts, I am redirected to the posts show page' do
         click_link 'See post details', match: :first
-        expect(current_path).to eq '/users/8/posts/4'
+        expect(current_path).to eq user_post_path(@fourth_post.author, @fourth_post)
       end
-      scenario 'When I click to see all posts, I am redirected to the users post inedex page' do
+      scenario 'When I click to see all posts, I am redirected to the users post index page' do
         click_link 'See all posts'
-        expect(current_path).to eq '/users/9/posts'
-      end 
+        expect(current_path).to eq user_posts_path(@first_user.id)
+      end
     end
   end
 end
