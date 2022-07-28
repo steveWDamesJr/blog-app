@@ -11,7 +11,10 @@
   </head>
 
   <body>
+    <%= render partial: "layouts/partials/navbar" %>
     <div class="main-container">
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
      <%= yield %>
     </div>
   </body>
