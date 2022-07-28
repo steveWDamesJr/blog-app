@@ -7,10 +7,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password posts_counter])
-    devise_parameter_sanitizer.permit(:edit, keys: %i[name  posts_counter])
+    devise_parameter_sanitizer.permit(:edit, keys: %i[name posts_counter])
   end
 
-  def after_sign_out_for(resources)
+  def after_sign_out_for(_resources)
     redirect_to new_user_session
   end
 end
