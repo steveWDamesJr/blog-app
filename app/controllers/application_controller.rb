@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_action :current_user
+  before_action :authenticate_user!
+  protect_from_forgery with: :exception
 
-  def current_user
-    Current.user = User.first
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password posts_counter])
   end
 end
