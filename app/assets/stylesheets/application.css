@@ -175,3 +175,19 @@
 .new-html-form-submit {
   color: blue;
 }
+.comments-form-placeholder {
+  text-align: center;
+  padding-top: 1rem;
+}
+.form-fields {
+  width: 60vw;
+}
+.log-in {
+  margin-top: 1rem;
+  width: 61vw;
+}
+.sign-up {
+  justify-content: flex-end;
+  margin-bottom: -2rem;
+  float: left;
+}
