@@ -81,3 +81,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# Handles Roles for your app
+gem 'cancancan', '~> 3.4'
