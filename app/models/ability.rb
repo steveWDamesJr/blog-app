@@ -1,6 +1,16 @@
 class Ability
   include CanCan::Ability
-  def user
-    @user = current_user
+
+  def initialize(user)
+    can :read, Post
+    can :read, Comment
+    return unless user.present?
+
+    can :manage, Post, author: user
+    can :manage, Comment, author: user
+
+    return unless user.admin?
+
+    can :manage, :all
   end
 end

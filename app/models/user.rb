@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   # ROLES = %w[admin default].freeze
   def admin?
-    roles == 'admin'
+    role == 'admin'
   end
 
   def recent_posts
