@@ -9,11 +9,12 @@
 </div>
 <br />
 <button class="create-new-posts-btn"><%= link_to ("Create a post"),new_user_post_path(@user.id)%></button>
-<%if @user.posts_counter == 0%>
+<%if @user.posts.count == 0%>
 <p>This user does not have any posts!</p>
 <% else %>
 <%= render partial: "layouts/partials/post_preview", locals: { posts: @user.recent_posts } %><br />
-<div class="show-create-button-con">
-  <button class="see-all-posts-btn"><%= link_to ("See all posts"),user_posts_path(@user.id)%></button>
-</div>
 <% end %>
+
+<div class="show-create-button-con">
+<%= link_to "see-all-posts-btn" , user_posts_path(@user), class: "btn btn-primary" if @user.posts.count > 0 %>
+</div>

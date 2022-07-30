@@ -25,12 +25,12 @@ Enjoy!
 - [x] Milestone 4: Setup and controllers
 - [x] Milestone 5: Controllers specs
 - [x] Milestone 6: Views
-- [ ] Milestone 7: Forms
-- [ ] Milestone 8: Integration specs for Views and fixing n+1 problems
-- [ ] Milestone 9: Add Devise
-- [ ] Milestone 10: Add authorization rules
-- [ ] Milestone 11: Add API endpoints
-- [ ] Milestone 12: API documentation
+- [x] Milestone 7: Forms
+- [x] Milestone 8: Integration specs for Views and fixing n+1 problems
+- [x] Milestone 9: Add Devise
+- [x] Milestone 10: Add authorization rules
+- [] Milestone 11: Add API endpoints
+- [] Milestone 12: API documentation
 
 ## Getting Started
 

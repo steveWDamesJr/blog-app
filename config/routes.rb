@@ -8,11 +8,16 @@ Rails.application.routes.draw do
   #   resources :posts, only: [:index, :show]
   # end
 
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :create, :new, :show] do
-      resources :comments, only: [:index, :create]
-      resources :likes, only: [:create, :destroy]
-    end
+  # resources :users, only: [:index, :show] do
+  #   resources :posts, only: [:index, :create, :new, :show, :destroy] do
+  #     resources :comments, only: [:index, :create]
+  #     resources :likes, only: [:create, :destroy]
+  #   end
+    resources :users do
+      resources :posts do
+        resources :comments
+        resources :likes
+      end
   end
   
   # get 'post/index'
@@ -25,7 +30,3 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "users#index"
 end
-
-# user = User.create(name: "raj",email:"raj@gmail.com",password: "foobar")
-# user = User.create(name: 'Clancy', photo: 'https://bit.ly/3O49ZQM', bio: 'Teacher from Mexico.', po
-#   sts_counter: 0, email:"clancy@gmail.com", password: "foobar")

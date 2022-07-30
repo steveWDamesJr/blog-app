@@ -1,5 +1,7 @@
 <h2>Welcome to the Users</h2>
-
+  <p> Hello <%= current_user.email %>!</p>
+  <p> You are a [<%= current_user.role%>]</p>
+  
 <% @users.each do |user| %>
 <%= render partial: "layouts/partials/user_header", locals: { user: user } %>
 <% end %>

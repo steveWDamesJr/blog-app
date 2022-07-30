@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :role)
   end
 
   def index
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     @posts = @user.recent_posts.includes(:author)
   end
 

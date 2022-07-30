@@ -14,6 +14,10 @@
         <span><strong><%=comment.author.name%></strong>:</span>
         <span><%=comment.text%></span>
       </p>
+      <%if can? :destroy, comment %>
+      <%= button_to "Delete Comment", user_post_comment_path(comment.author, @post, comment), 
+          method: :delete, data: { confirm: "Are you sure?" } %> 
+      <% end %>
     <%end%>
 <%= render partial: "layouts/partials/new_comment" %>
 </div>
