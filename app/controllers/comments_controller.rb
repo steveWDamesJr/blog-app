@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     post = Post.find(params[:post_id])
     @comment.post = post
     if @comment.save
-       respond_to do |format|
+      respond_to do |format|
         format.html do
           flash[:notice] = 'Comment was successfully created'
           redirect_to user_post_path(post.author, post)
@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
         format.json do
           render json: @comment
         end
-      end 
+      end
     else
       render :new, status: :unprocessable_entity
     end
