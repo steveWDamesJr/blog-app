@@ -29,7 +29,7 @@ Enjoy!
 - [x] Milestone 8: Integration specs for Views and fixing n+1 problems
 - [x] Milestone 9: Add Devise
 - [x] Milestone 10: Add authorization rules
-- [] Milestone 11: Add API endpoints
+- [x] Milestone 11: Add API endpoints
 - [] Milestone 12: API documentation
 
 ## Getting Started

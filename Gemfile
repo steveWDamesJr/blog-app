@@ -18,6 +18,12 @@ gem 'pg', '~> 1.1'
 # Use the devise gem as the session and account manager for the app
 gem 'devise'
 
+# A token for authentication of api's
+gem 'devise-jwt'
+
+# Define who is allowed to interact with api for your app
+gem 'rack-cors'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -84,3 +90,6 @@ end
 
 # Handles Roles for your app
 gem 'cancancan', '~> 3.4'
+
+# Creates a dotenv file
+gem 'dotenv-rails', groups: %i[development test]
