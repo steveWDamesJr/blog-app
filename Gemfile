@@ -67,6 +67,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -76,6 +77,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+  # Autmatically generate api documenation accessible in swagger-ui
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -93,3 +95,7 @@ gem 'cancancan', '~> 3.4'
 
 # Creates a dotenv file
 gem 'dotenv-rails', groups: %i[development test]
+
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'

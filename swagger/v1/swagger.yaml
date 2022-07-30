@@ -1,0 +1,37 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/users/1/posts":
+    post:
+      summary: Test create blog post
+      tags:
+      - Posts
+      parameters: []
+      responses:
+        '201':
+          description: post created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                text:
+                  type: string
+                comments_counter:
+                  type: integer
+                likes_counter:
+                  type: integer
+              required:
+              - title
+              - text
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
